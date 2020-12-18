@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <title>Review Analysis</title>
+    <link rel="stylesheet" href = "../static/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body  style="  background-color:#DFCFBE  ; ">
+<DIV>
+<h3 style="background-color:#55B4B0; padding-top:50px; padding-bottom: 50px;"> Here is our analysis ...</h3>
+
+<div class="jumbotron" style="background-color:#55B4B0;">
+<div class="row">
+    <div class="col-lg-6">
+        <h5> Total Ratings received: {{total_rating}}</h5>
+        <h5> Out of which we have received reviews for: {{total_reviews}}</h5>
+    </div>
+    <hr/>
+    <div class="col-lg-6">
+        <h5> Positive Reviews for App Version: {{latest_version}} is approx {{VrsnRating}} </h5>
+    </div>
+</div>
+</div>
+        </DIV>
+
+
+
+<div class="container">
+    <h1> Five Most Negative Sentence</h1>
+            {% if best_negsentences %}
+                 <ul >
+                    {% for neg in best_negsentences.split("\n")[1:]%}
+                     <li>{{ neg }}</li>
+                     {% endfor %}
+                 </ul>
+            {% endif %}
+    <hr/>
+
+    <h1> Five Most Positive Sentence</h1>
+        {% if pos_best_sentences %}
+        <ul >
+            {% for pos in pos_best_sentences.split("\n")[1:]%}
+            <li>{{ pos }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+</div>
+
+<div style="background-color:#55B4B0; padding-top:50px; padding-bottom: 50px;">
+        <img class="wrdcld" src="data:image/jpeg;base64,{{ image }}">
+</div>
+
+<div>
+    <p> CopyRight @PrachiGoyal</p>
+</div>
+</body>

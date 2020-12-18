@@ -1,0 +1,38 @@
+ .background {
+  background-color: #FF0000;
+   border: 2px solid black;
+  background-attachment: fixed;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+ -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+.title
+{
+padding: 40px;
+margin-left: 30%;
+margin-right: 30%;
+width: 40%;
+align:center;
+}
+
+.wrdcld
+{
+	max-width: 80%;
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
